@@ -1,0 +1,610 @@
+Last login: Mon Apr 18 23:14:10 on ttys002
+(base) swetha@Swethas-MBP ~ % ls
+Applications			Library				PycharmProjects
+Desktop				Movies				learn-terraform-aws-instance
+Documents			Music				nltk_data
+Downloads			Pictures			test
+IdeaProjects			Projects
+Justinmind			Public
+(base) swetha@Swethas-MBP ~ % cd Desktop/SCU\ MSIS/lingua-franca-project 
+(base) swetha@Swethas-MBP lingua-franca-project % pwd
+/Users/swetha/Desktop/SCU MSIS/lingua-franca-project
+(base) swetha@Swethas-MBP lingua-franca-project % ls
+lingua-franca	solution.html	tasks.html
+(base) swetha@Swethas-MBP lingua-franca-project % mkdir world
+(base) swetha@Swethas-MBP lingua-franca-project % touch world/esperanto.txt
+(base) swetha@Swethas-MBP lingua-franca-project % ls 
+lingua-franca	solution.html	tasks.html	world
+(base) swetha@Swethas-MBP lingua-franca-project % ls world 
+esperanto.txt
+(base) swetha@Swethas-MBP lingua-franca-project % ls -alt
+total 56
+drwxr-xr-x   3 swetha  staff     96 Apr 18 23:47 world
+drwx------@  6 swetha  staff    192 Apr 18 23:47 .
+drwxrwxrwx  12 swetha  staff    384 Apr 18 23:46 ..
+-rw-rw-r--@  1 swetha  staff   9151 Oct  5  2020 tasks.html
+(base) swetha@Swethas-MBP lingua-franca-project % ls lingua-franca/europe 
+chinese.txt	french.txt	italian.txt	russian.txt
+english.txt	german.txt	portuguese.txt
+(base) swetha@Swethas-MBP lingua-franca-project % mv lingua-franca/europe/chinese.txt lingua-franca/asia 
+(base) swetha@Swethas-MBP lingua-franca-project % cd lingua-franca 
+(base) swetha@Swethas-MBP lingua-franca % ls
+africa		europe		southamerica	todo
+asia		northamerica	spanish.txt
+(base) swetha@Swethas-MBP lingua-franca % ls asia 
+arabic.txt	hebrew.txt	japanese.txt	malay.txt
+chinese.txt	hindi.txt	korean.txt
+(base) swetha@Swethas-MBP lingua-franca % ls europe 
+english.txt	german.txt	portuguese.txt
+french.txt	italian.txt	russian.txt
+(base) swetha@Swethas-MBP lingua-franca % ls
+africa		europe		southamerica	todo
+asia		northamerica	spanish.txt
+(base) swetha@Swethas-MBP lingua-franca % cp spanish.txt europe 
+(base) swetha@Swethas-MBP lingua-franca % cp spanish.txt southamerica 
+(base) swetha@Swethas-MBP lingua-franca % cp spanish.txt northamerica 
+(base) swetha@Swethas-MBP lingua-franca % rm spanish.txt 
+(base) swetha@Swethas-MBP lingua-franca % ls
+africa		europe		southamerica
+asia		northamerica	todo
+(base) swetha@Swethas-MBP lingua-franca % ls todo 
+africa	asia	europe
+(base) swetha@Swethas-MBP lingua-franca % ls todo/*
+todo/africa:
+afrihili.txt
+
+todo/asia:
+bengali.txt	punjabi.txt
+
+todo/europe:
+yiddish.txt
+(base) swetha@Swethas-MBP lingua-franca % cp todo/africa africa 
+cp: todo/africa is a directory (not copied).
+(base) swetha@Swethas-MBP lingua-franca % cp todo/africa/* africa
+(base) swetha@Swethas-MBP lingua-franca % cp todo/asia/* asia    
+(base) swetha@Swethas-MBP lingua-franca % cp todo/europe/* europe
+(base) swetha@Swethas-MBP lingua-franca % ls
+africa		europe		southamerica
+asia		northamerica	todo
+(base) swetha@Swethas-MBP lingua-franca % rm -R todo/*
+zsh: sure you want to delete all 3 files in /Users/swetha/Desktop/SCU MSIS/lingua-franca-project/lingua-franca/todo [yn]? y
+(base) swetha@Swethas-MBP lingua-franca % 
+(base) swetha@Swethas-MBP lingua-franca % ls
+africa		europe		southamerica
+asia		northamerica	todo
+(base) swetha@Swethas-MBP lingua-franca % ls todo 
+(base) swetha@Swethas-MBP lingua-franca % cd todo 
+(base) swetha@Swethas-MBP todo % ls
+(base) swetha@Swethas-MBP todo % cd ../
+(base) swetha@Swethas-MBP lingua-franca % ls
+africa		europe		southamerica
+asia		northamerica	todo
+(base) swetha@Swethas-MBP lingua-franca % ls asia 
+arabic.txt	hebrew.txt	korean.txt
+bengali.txt	hindi.txt	malay.txt
+chinese.txt	japanese.txt	punjabi.txt
+(base) swetha@Swethas-MBP lingua-franca % ls asia>todo/asian_language_files.txt
+(base) swetha@Swethas-MBP lingua-franca % ls todo                             
+asian_language_files.txt
+(base) swetha@Swethas-MBP lingua-franca % ls todo/asian_language_files.txt 
+todo/asian_language_files.txt
+(base) swetha@Swethas-MBP lingua-franca % cat todo/asian_language_files.txt
+arabic.txt
+bengali.txt
+chinese.txt
+hebrew.txt
+hindi.txt
+japanese.txt
+korean.txt
+malay.txt
+punjabi.txt
+(base) swetha@Swethas-MBP lingua-franca % ls asia 
+arabic.txt	hebrew.txt	korean.txt
+bengali.txt	hindi.txt	malay.txt
+chinese.txt	japanese.txt	punjabi.txt
+(base) swetha@Swethas-MBP lingua-franca % echo Welkom by die Lingua Franca vertaaldienste > africa/afrikaans.txt 
+(base) swetha@Swethas-MBP lingua-franca % ls africa/afrikaans.txt 
+africa/afrikaans.txt
+(base) swetha@Swethas-MBP lingua-franca % cat africa/afrikaans.txt
+Welkom by die Lingua Franca vertaaldienste
+(base) swetha@Swethas-MBP lingua-franca % ls
+africa		europe		southamerica
+asia		northamerica	todo
+(base) swetha@Swethas-MBP lingua-franca % ls southamerica 
+portuguese.txt	spanish.txt
+(base) swetha@Swethas-MBP lingua-franca % ls             
+africa		europe		southamerica
+asia		northamerica	todo
+(base) swetha@Swethas-MBP lingua-franca % grep -R *.txt
+zsh: no matches found: *.txt
+(base) swetha@Swethas-MBP lingua-franca % grep *.txt
+zsh: no matches found: *.txt
+(base) swetha@Swethas-MBP lingua-franca % cd asia   
+(base) swetha@Swethas-MBP asia % ls
+arabic.txt	hebrew.txt	korean.txt
+bengali.txt	hindi.txt	malay.txt
+chinese.txt	japanese.txt	punjabi.txt
+(base) swetha@Swethas-MBP asia % grep *.txt
+(base) swetha@Swethas-MBP asia % grep -R *.txt
+(base) swetha@Swethas-MBP asia % cd ../       
+(base) swetha@Swethas-MBP lingua-franca % ls
+africa		europe		southamerica
+asia		northamerica	todo
+(base) swetha@Swethas-MBP lingua-franca % ls africa/afrikaans.txt wc
+ls: wc: No such file or directory
+africa/afrikaans.txt
+(base) swetha@Swethas-MBP lingua-franca % ls africa/afrikaans.txt | wc
+       1       1      21
+(base) swetha@Swethas-MBP lingua-franca % ls
+africa		europe		southamerica
+asia		northamerica	todo
+(base) swetha@Swethas-MBP lingua-franca % cat africa/afrikaans.txt 
+Welkom by die Lingua Franca vertaaldienste
+(base) swetha@Swethas-MBP lingua-franca % cat africa/afrikaans.txt | wc
+       1       6      43
+(base) swetha@Swethas-MBP lingua-franca % cat africa/*.txt | wc
+       1       6      43
+(base) swetha@Swethas-MBP lingua-franca % ls
+africa		europe		southamerica
+asia		northamerica	todo
+(base) swetha@Swethas-MBP lingua-franca % cat *
+cat: africa: Is a directory
+cat: asia: Is a directory
+cat: europe: Is a directory
+cat: northamerica: Is a directory
+cat: southamerica: Is a directory
+cat: todo: Is a directory
+(base) swetha@Swethas-MBP lingua-franca % cat */*.txt | wc
+      21      64     563
+(base) swetha@Swethas-MBP lingua-franca % grep */*.txt
+(base) swetha@Swethas-MBP lingua-franca % grep */*.txt | wc
+       0       0       0
+(base) swetha@Swethas-MBP lingua-franca % grep asia/*.txt | wc
+       0       0       0
+(base) swetha@Swethas-MBP lingua-franca % cat asia/*.txt | wc
+       7      25     208
+(base) swetha@Swethas-MBP lingua-franca % cat asia/*.txt   
+mrhbana bikum fi khadamat tarjamat Lingua-Franca.
+여보세요
+Selamat datang ke perkhidmatan terjemahan Lingua-Franca.
+Berikut adalah beberapa perkataan dalam bahasa Melayu:
+Helo
+Selamat tinggal
+Apa khabar?
+(base) swetha@Swethas-MBP lingua-franca % cat asia/*.txt | wc
+       7      25     208
+(base) swetha@Swethas-MBP lingua-franca % ls asia
+arabic.txt	hebrew.txt	korean.txt
+bengali.txt	hindi.txt	malay.txt
+chinese.txt	japanese.txt	punjabi.txt
+(base) swetha@Swethas-MBP lingua-franca % ls asia/*.txt | wc
+       9       9     147
+(base) swetha@Swethas-MBP lingua-franca % wc -l
+^C
+(base) swetha@Swethas-MBP lingua-franca % ls    
+africa		europe		southamerica
+asia		northamerica	todo
+(base) swetha@Swethas-MBP lingua-franca % wc -l */*.txt                       
+       0 africa/afrihili.txt
+       1 africa/afrikaans.txt
+       1 asia/arabic.txt
+       0 asia/bengali.txt
+       0 asia/chinese.txt
+       0 asia/hebrew.txt
+       0 asia/hindi.txt
+       0 asia/japanese.txt
+       1 asia/korean.txt
+       5 asia/malay.txt
+       0 asia/punjabi.txt
+       1 europe/english.txt
+       0 europe/french.txt
+       0 europe/german.txt
+       0 europe/italian.txt
+       1 europe/portuguese.txt
+       0 europe/russian.txt
+       0 europe/spanish.txt
+       0 europe/yiddish.txt
+       1 northamerica/english.txt
+       0 northamerica/french.txt
+       0 northamerica/spanish.txt
+       1 southamerica/portuguese.txt
+       0 southamerica/spanish.txt
+       9 todo/asian_language_files.txt
+      21 total
+(base) swetha@Swethas-MBP lingua-franca % */*.txt      
+zsh: permission denied: africa/afrihili.txt
+(base) swetha@Swethas-MBP lingua-franca % ls */*.txt
+africa/afrihili.txt		europe/german.txt
+africa/afrikaans.txt		europe/italian.txt
+asia/arabic.txt			europe/portuguese.txt
+asia/bengali.txt		europe/russian.txt
+asia/chinese.txt		europe/spanish.txt
+asia/hebrew.txt			europe/yiddish.txt
+asia/hindi.txt			northamerica/english.txt
+asia/japanese.txt		northamerica/french.txt
+asia/korean.txt			northamerica/spanish.txt
+asia/malay.txt			southamerica/portuguese.txt
+asia/punjabi.txt		southamerica/spanish.txt
+europe/english.txt		todo/asian_language_files.txt
+europe/french.txt
+(base) swetha@Swethas-MBP lingua-franca % wc */*.txt
+       0       0       0 africa/afrihili.txt
+       1       6      43 africa/afrikaans.txt
+       1       6      50 asia/arabic.txt
+       0       0       0 asia/bengali.txt
+       0       0       0 asia/chinese.txt
+       0       0       0 asia/hebrew.txt
+       0       0       0 asia/hindi.txt
+       0       0       0 asia/japanese.txt
+       1       1      13 asia/korean.txt
+       5      18     145 asia/malay.txt
+       0       0       0 asia/punjabi.txt
+       1       6      52 europe/english.txt
+       0       0       0 europe/french.txt
+       0       0       0 europe/german.txt
+       0       0       0 europe/italian.txt
+       1       6      53 europe/portuguese.txt
+       0       0       0 europe/russian.txt
+       0       0       0 europe/spanish.txt
+       0       0       0 europe/yiddish.txt
+       1       6      52 northamerica/english.txt
+       0       0       0 northamerica/french.txt
+       0       0       0 northamerica/spanish.txt
+       1       6      53 southamerica/portuguese.txt
+       0       0       0 southamerica/spanish.txt
+       9       9     102 todo/asian_language_files.txt
+      21      64     563 total
+(base) swetha@Swethas-MBP lingua-franca % wc -l */*.txt 
+       0 africa/afrihili.txt
+       1 africa/afrikaans.txt
+       1 asia/arabic.txt
+       0 asia/bengali.txt
+       0 asia/chinese.txt
+       0 asia/hebrew.txt
+       0 asia/hindi.txt
+       0 asia/japanese.txt
+       1 asia/korean.txt
+       5 asia/malay.txt
+       0 asia/punjabi.txt
+       1 europe/english.txt
+       0 europe/french.txt
+       0 europe/german.txt
+       0 europe/italian.txt
+       1 europe/portuguese.txt
+       0 europe/russian.txt
+       0 europe/spanish.txt
+       0 europe/yiddish.txt
+       1 northamerica/english.txt
+       0 northamerica/french.txt
+       0 northamerica/spanish.txt
+       1 southamerica/portuguese.txt
+       0 southamerica/spanish.txt
+       9 todo/asian_language_files.txt
+      21 total
+(base) swetha@Swethas-MBP lingua-franca % wc -l */*.txt | grep 0
+       0 africa/afrihili.txt
+       0 asia/bengali.txt
+       0 asia/chinese.txt
+       0 asia/hebrew.txt
+       0 asia/hindi.txt
+       0 asia/japanese.txt
+       0 asia/punjabi.txt
+       0 europe/french.txt
+       0 europe/german.txt
+       0 europe/italian.txt
+       0 europe/russian.txt
+       0 europe/spanish.txt
+       0 europe/yiddish.txt
+       0 northamerica/french.txt
+       0 northamerica/spanish.txt
+       0 southamerica/spanish.txt
+(base) swetha@Swethas-MBP lingua-franca % wc -l */*.txt | grep -i 0
+       0 africa/afrihili.txt
+       0 asia/bengali.txt
+       0 asia/chinese.txt
+       0 asia/hebrew.txt
+       0 asia/hindi.txt
+       0 asia/japanese.txt
+       0 asia/punjabi.txt
+       0 europe/french.txt
+       0 europe/german.txt
+       0 europe/italian.txt
+       0 europe/russian.txt
+       0 europe/spanish.txt
+       0 europe/yiddish.txt
+       0 northamerica/french.txt
+       0 northamerica/spanish.txt
+       0 southamerica/spanish.txt
+(base) swetha@Swethas-MBP lingua-franca % wc -l */*.txt | grep 0   
+       0 africa/afrihili.txt
+       0 asia/bengali.txt
+       0 asia/chinese.txt
+       0 asia/hebrew.txt
+       0 asia/hindi.txt
+       0 asia/japanese.txt
+       0 asia/punjabi.txt
+       0 europe/french.txt
+       0 europe/german.txt
+       0 europe/italian.txt
+       0 europe/russian.txt
+       0 europe/spanish.txt
+       0 europe/yiddish.txt
+       0 northamerica/french.txt
+       0 northamerica/spanish.txt
+       0 southamerica/spanish.txt
+(base) swetha@Swethas-MBP lingua-franca % wc -l */*.txt | grep 0 > todo/empty_files.txt
+(base) swetha@Swethas-MBP lingua-franca % cat todo/empty_files.txt 
+       0 africa/afrihili.txt
+       0 asia/bengali.txt
+       0 asia/chinese.txt
+       0 asia/hebrew.txt
+       0 asia/hindi.txt
+       0 asia/japanese.txt
+       0 asia/punjabi.txt
+       0 europe/french.txt
+       0 europe/german.txt
+       0 europe/italian.txt
+       0 europe/russian.txt
+       0 europe/spanish.txt
+       0 europe/yiddish.txt
+       0 northamerica/french.txt
+       0 northamerica/spanish.txt
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua-Franca/Lingua Franca' */*.txt
+sed: 1: "africa/afrihili.txt": command a expects \ followed by text
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua-Franca/Lingua Franca/g' */*.txt
+sed: 1: "africa/afrihili.txt": command a expects \ followed by text
+(base) swetha@Swethas-MBP lingua-franca % grep -Rl 'Lingua-Franca' */*.txt  
+asia/arabic.txt
+asia/malay.txt
+europe/english.txt
+europe/portuguese.txt
+northamerica/english.txt
+southamerica/portuguese.txt
+(base) swetha@Swethas-MBP lingua-franca % grep -Rl 'Lingua-Franca' */*.txt | wc -l
+       6
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua-Franca/Lingua Franca/g' */*.txt
+sed: 1: "africa/afrihili.txt": command a expects \ followed by text
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua-Franca/Lingua Franca/g' */*.txt
+sed: 1: "africa/afrihili.txt": command a expects \ followed by text
+(base) swetha@Swethas-MBP lingua-franca % ls
+africa		europe		southamerica
+asia		northamerica	todo
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua-Franca/Lingua Franca/g' africa/afrikaans.txt 
+sed: 1: "africa/afrikaans.txt": command a expects \ followed by text
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua-Franca/Lingua Franca/g' africa/afrikaans.txt\
+> 
+sed: 1: "africa/afrikaans.txt": command a expects \ followed by text
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua-Franca/Lingua Franca/g' asia/hindi.txt 
+
+sed: 1: "asia/hindi.txt": command a expects \ followed by text
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua-Franca/Lingua Franca/g' */*.txt
+sed: 1: "africa/afrihili.txt": command a expects \ followed by text
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua-Franca/Lingua Franca/g' */*.txt/
+zsh: no matches found: */*.txt/
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua-Franca/Lingua Franca/g' */*.txt\
+> 
+sed: 1: "africa/afrihili.txt": command a expects \ followed by text
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua-Franca/Lingua Franca/g' /*/*.txt
+zsh: no matches found: /*/*.txt
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua-Franca/Lingua Franca/g' /*/*.txt
+zsh: no matches found: /*/*.txt
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua-Franca/Lingua Franca/g' \*/*.txt
+zsh: no matches found: */*.txt
+(base) swetha@Swethas-MBP lingua-franca % nano ~/.bash_profile
+(base) swetha@Swethas-MBP lingua-franca % source ~/.bash_profile 
+(base) swetha@Swethas-MBP lingua-franca % 
+(base) swetha@Swethas-MBP lingua-franca % nano ~/.bash_profile  
+(base) swetha@Swethas-MBP lingua-franca % source ~/.bash_profile
+(base) swetha@Swethas-MBP lingua-franca % nano ~/.bash_profile  
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua-Franca/Lingua Franca/g' */*.txt
+sed: 1: "africa/afrihili.txt": command a expects \ followed by text
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua-Franca/Lingua\ Franca/g' */*.txt
+sed: 1: "africa/afrihili.txt": command a expects \ followed by text
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua-Franca/Lingua\Franca/g' */*.txt 
+sed: 1: "africa/afrihili.txt": command a expects \ followed by text
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua-Franca/Lingua\ Franca/g' */*.txt
+sed: 1: "africa/afrihili.txt": command a expects \ followed by text
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua-Franca/LinguaFranca/g' */*.txt 
+sed: 1: "africa/afrihili.txt": command a expects \ followed by text
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua-Franca/Lingua Franca/g' africa/afrikaans.txt 
+sed: 1: "africa/afrikaans.txt": command a expects \ followed by text
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua-Franca/Lingua Franca/g' africa/afrikaans.txt
+sed: 1: "africa/afrikaans.txt": command a expects \ followed by text
+(base) swetha@Swethas-MBP lingua-franca % ls africa 
+afrihili.txt	afrikaans.txt
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua-Franca/Lingua Franca/g' africa/afrihili.txt 
+sed: 1: "africa/afrihili.txt": command a expects \ followed by text
+(base) swetha@Swethas-MBP lingua-franca % nano ~/.bash_profile
+(base) swetha@Swethas-MBP lingua-franca % nano ~/.bash_profile
+(base) swetha@Swethas-MBP lingua-franca % source ~/.bash_profile
+(base) swetha@Swethas-MBP lingua-franca % nano ~/.bash_profile  
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua Franca/Lingua-Franca/g' africa/afrihili.txt
+sed: 1: "africa/afrihili.txt": command a expects \ followed by text
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua\Franca/Lingua-Franca/g' africa/afrihili.txt
+sed: 1: "africa/afrihili.txt": command a expects \ followed by text
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua\ Franca/Lingua-Franca/g' africa/afrihili.txt
+sed: 1: "africa/afrihili.txt": command a expects \ followed by text
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua-Franca/LinguaFranca/g' asia/arabic.txt     
+sed: 1: "asia/arabic.txt": command a expects \ followed by text
+(base) swetha@Swethas-MBP lingua-franca % sed -i 's/Lingua-Franca/Lingua Franca/g' asia/arabic.txt
+sed: 1: "asia/arabic.txt": command a expects \ followed by text
+(base) swetha@Swethas-MBP lingua-franca % sed -i'.bak' -e 's/Lingua-Franca/Lingua Franca/g' asia/arabic.txt
+(base) swetha@Swethas-MBP lingua-franca % ls asia
+arabic.txt	bengali.txt	hebrew.txt	japanese.txt	malay.txt
+arabic.txt.bak	chinese.txt	hindi.txt	korean.txt	punjabi.txt
+(base) swetha@Swethas-MBP lingua-franca % ls asia/arabic.txt
+asia/arabic.txt
+(base) swetha@Swethas-MBP lingua-franca % cat asia/arabic.txt
+mrhbana bikum fi khadamat tarjamat Lingua Franca.
+(base) swetha@Swethas-MBP lingua-franca % ls                 
+africa		asia		europe		northamerica	southamerica	todo
+(base) swetha@Swethas-MBP lingua-franca % sed'.bak' -e 's/Lingua-Franca/Lingua Franca/g' */*.txt                
+zsh: command not found: sed.bak
+(base) swetha@Swethas-MBP lingua-franca % sed -i'.bak' -e 's/Lingua-Franca/Lingua Franca/g' */*.txt
+(base) swetha@Swethas-MBP lingua-franca % nano ~/.bash_profile
+(base) swetha@Swethas-MBP lingua-franca % nano ~/.bash_profile
+(base) swetha@Swethas-MBP lingua-franca % source ~/.bash_profile
+(base) swetha@Swethas-MBP lingua-franca % nano ~/.bash_profile  
+(base) swetha@Swethas-MBP lingua-franca % nano ~/.bash_profile
+(base) swetha@Swethas-MBP lingua-franca % ls -al ~/.bash_profile
+-rw-r--r--  1 root  staff  447 Dec 12 18:35 /Users/swetha/.bash_profile
+(base) swetha@Swethas-MBP lingua-franca % ls -al ~/.bash_profile
+(base) swetha@Swethas-MBP lingua-franca % chown swetha:staff ~/.bash_profile
+chown: /Users/swetha/.bash_profile: Operation not permitted
+(base) swetha@Swethas-MBP lingua-franca % sudo chown swetha:staff ~/.bash_profile
+Password:
+(base) swetha@Swethas-MBP lingua-franca % ls -al ~/.bash_profile            
+-rw-r--r--  1 swetha  staff  447 Dec 12 18:35 /Users/swetha/.bash_profile
+(base) swetha@Swethas-MBP lingua-franca % ls -al ~/.bash_profile            
+(base) swetha@Swethas-MBP lingua-franca % vi ~/.bash_profile
+(base) swetha@Swethas-MBP lingua-franca % nano ~/.bash_profile                   
+(base) swetha@Swethas-MBP lingua-franca % source ~/.bash_profile
+Gello
+(base) swetha@Swethas-MBP lingua-franca % ls
+africa		asia		europe		northamerica	southamerica	todo
+(base) swetha@Swethas-MBP lingua-franca % zsh
+(base) swetha@Swethas-MBP lingua-franca % cat ~/.zsh_  
+(base) swetha@Swethas-MBP lingua-franca % source ~/.bash_profile
+Gello
+(base) swetha@Swethas-MBP lingua-franca % nano ~/.bash_profile  
+(base) swetha@Swethas-MBP lingua-franca % source ~/.bash_profile
+Hello
+(base) swetha@Swethas-MBP lingua-franca % nano ~/.bash_profile  
+(base) swetha@Swethas-MBP lingua-franca % source ~/.bash_profile
+Hello
+(base) swetha@Swethas-MBP lingua-franca % md translations
+(base) swetha@Swethas-MBP lingua-franca % ls
+africa		asia		europe		northamerica	southamerica	todo		translations
+(base) swetha@Swethas-MBP lingua-franca % ls translations 
+(base) swetha@Swethas-MBP lingua-franca % d
+Wed Apr 20 10:03:12 PDT 2022
+(base) swetha@Swethas-MBP lingua-franca % hy
+ 1014  ls -al ~/.bash_profile
+ 1015  chown swetha:staff ~/.bash_profile
+ 1016  sudo chown swetha:staff ~/.bash_profile
+ 1017  ls -al ~/.bash_profile
+ 1018  nano ~/.bash_profile
+ 1019  source ~/.bash_profile
+ 1020  ls
+ 1021  source ~/.bash_profile
+ 1022  nano ~/.bash_profile
+ 1023  source ~/.bash_profile
+ 1024  nano ~/.bash_profile
+ 1025  source ~/.bash_profile
+ 1026  md translations
+ 1027  ls
+ 1028  ls translations
+ 1029  d
+(base) swetha@Swethas-MBP lingua-franca % history
+ 1015  chown swetha:staff ~/.bash_profile
+ 1016  sudo chown swetha:staff ~/.bash_profile
+ 1017  ls -al ~/.bash_profile
+ 1018  nano ~/.bash_profile
+ 1019  source ~/.bash_profile
+ 1020  ls
+ 1021  source ~/.bash_profile
+ 1022  nano ~/.bash_profile
+ 1023  source ~/.bash_profile
+ 1024  nano ~/.bash_profile
+ 1025  source ~/.bash_profile
+ 1026  md translations
+ 1027  ls
+ 1028  ls translations
+ 1029  d
+ 1030  hy
+(base) swetha@Swethas-MBP lingua-franca % nano ~/.bash_profile  
+(base) swetha@Swethas-MBP lingua-franca % source ~/.bash_profile
+Hello
+(base) Lingua Franca > md script
+(base) Lingua Franca > ls script
+(base) Lingua Franca > d
+Wed Apr 20 10:05:13 PDT 2022
+(base) Lingua Franca > hy
+ 1021  source ~/.bash_profile
+ 1022  nano ~/.bash_profile
+ 1023  source ~/.bash_profile
+ 1024  nano ~/.bash_profile
+ 1025  source ~/.bash_profile
+ 1026  md translations
+ 1027  ls
+ 1028  ls translations
+ 1029  d
+ 1030  hy
+ 1031  history
+ 1032  nano ~/.bash_profile
+ 1033  source ~/.bash_profile
+ 1034  md script
+ 1035  ls script
+ 1036  d
+(base) Lingua Franca > env
+TERM_SESSION_ID=A67685C1-7935-4838-A3F6-49A3E503F16C
+SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.zi5J4NtkEZ/Listeners
+CONDA_PREFIX=/opt/anaconda3
+XPC_FLAGS=0x0
+CONDA_DEFAULT_ENV=base
+CONDA_EXE=/opt/anaconda3/bin/conda
+__CFBundleIdentifier=com.apple.Terminal
+PWD=/Users/swetha/Desktop/SCU MSIS/lingua-franca-project/lingua-franca
+TERM_PROGRAM_VERSION=443
+CONDA_SHLVL=1
+TERM_PROGRAM=Apple_Terminal
+CONDA_ROOT=/opt/anaconda3
+CONDA_PYTHON_EXE=/opt/anaconda3/bin/python
+_CE_M=
+SHLVL=3
+TERM=xterm-256color
+TMPDIR=/var/folders/f6/pd7_vcpx5dj675686dzmw2th0000gn/T/
+EVENT_NOKQUEUE=1
+_CE_CONDA=
+CONDA_PROMPT_MODIFIER=(base) 
+XPC_SERVICE_NAME=0
+SHELL=/bin/zsh
+HOME=/Users/swetha
+LOGNAME=swetha
+USER=swetha
+PATH=/opt/anaconda3/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+OLDPWD=/Users/swetha/Desktop/SCU MSIS/lingua-franca-project/lingua-franca/asia
+HOMEBREW_PREFIX=/opt/homebrew
+HOMEBREW_CELLAR=/opt/homebrew/Cellar
+HOMEBREW_REPOSITORY=/opt/homebrew
+MANPATH=/opt/homebrew/share/man::
+INFOPATH=/opt/homebrew/share/info:
+PS1=(base) Lingua Franca > 
+PROJ_LIB=/opt/anaconda3/share/proj
+LANG=en_US.UTF-8
+LC_CTYPE=UTF-8
+_=/usr/bin/env
+(base) Lingua Franca > ls -R
+africa		europe		script		todo
+asia		northamerica	southamerica	translations
+
+./africa:
+afrihili.txt		afrihili.txt.bak	afrikaans.txt		afrikaans.txt.bak
+
+./asia:
+arabic.txt		chinese.txt.bak		japanese.txt		malay.txt.bak
+arabic.txt.bak		hebrew.txt		japanese.txt.bak	punjabi.txt
+bengali.txt		hebrew.txt.bak		korean.txt		punjabi.txt.bak
+bengali.txt.bak		hindi.txt		korean.txt.bak
+chinese.txt		hindi.txt.bak		malay.txt
+
+./europe:
+english.txt		german.txt		portuguese.txt		spanish.txt
+english.txt.bak		german.txt.bak		portuguese.txt.bak	spanish.txt.bak
+french.txt		italian.txt		russian.txt		yiddish.txt
+french.txt.bak		italian.txt.bak		russian.txt.bak		yiddish.txt.bak
+
+./northamerica:
+english.txt	english.txt.bak	french.txt	french.txt.bak	spanish.txt	spanish.txt.bak
+
+./script:
+
+./southamerica:
+portuguese.txt		portuguese.txt.bak	spanish.txt		spanish.txt.bak
+
+./todo:
+asian_language_files.txt	empty_files.txt
+asian_language_files.txt.bak	empty_files.txt.bak
+
+./translations:
+(base) Lingua Franca >       
